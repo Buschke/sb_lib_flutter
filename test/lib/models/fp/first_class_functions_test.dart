@@ -1,10 +1,8 @@
-void printResult(int result) {
-  print(result); 
-}
+import 'package:flutter_test/flutter_test.dart';
+import 'package:sb_fl_app/lib/models/fp/first_class_functions.dart';
 
-void calculate(int a, int b, Function callback) {
-  int result = a + b;
-  callback(result);
+void main() {
+  test('calculate', () {
+    expect(calculate(2, 3, printResult), 5);
+  });
 }
-
-void main() => calculate(2, 3, printResult);
