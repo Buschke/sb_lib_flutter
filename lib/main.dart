@@ -1,20 +1,39 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const Hauptseite(schluessel: Key('Hauptseite')));
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class Hauptseite extends StatelessWidget {
+  const Hauptseite({Key? schluessel}) : super(key: schluessel);
 
   @override
+  Widget build(BuildContext context) => const HauptseiteSeite();
+}
+
+class HauptseiteSeite extends StatefulWidget {
+  const HauptseiteSeite({Key? schluessel}) : super(key: schluessel);
+
+  @override
+  State<HauptseiteSeite> createState() => _HauptseiteSeiteZustand();
+}
+
+class _HauptseiteSeiteZustand extends State<HauptseiteSeite> {
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return PlatformProvider(
+      builder: (context) => PlatformTheme(
+        builder: (context) => PlatformApp(
+          localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
+            DefaultMaterialLocalizations.delegate,
+            DefaultWidgetsLocalizations.delegate,
+            DefaultCupertinoLocalizations.delegate,
+          ],
+         home: PlatformScaffold(
+           body: const Text('Hello World!'),
+         ),
       ),
+    ),
     );
   }
 }
