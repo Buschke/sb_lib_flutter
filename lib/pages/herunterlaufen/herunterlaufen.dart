@@ -68,6 +68,23 @@ class _HerunterlaufenSeiteZustand extends State<HerunterlaufenSeite> {
     'Joe Biden',
   ];
 
+  List<String> indiziere(List<String> liste) {
+    return liste.asMap().entries.map((entry) {
+      final index = entry.key + 1;
+      final name = entry.value;
+      final indexedName = '$index. $name';
+      return indexedName;
+    }).toList();
+  }
+
+  List<String> indiziertePraesidenten = [];
+
+  @override
+  void initState() {
+    super.initState();
+    indiziertePraesidenten = indiziere(praesidenten);
+  }
+
   @override
   Widget build(BuildContext context) => PlatformProvider(
         builder: (context) => PlatformTheme(
@@ -92,7 +109,7 @@ class _HerunterlaufenSeiteZustand extends State<HerunterlaufenSeite> {
                 ],
               ),
               body: Center(
-                child: PraesidentenListe(meineListe: praesidenten),
+                child: PraesidentenListe(meineListe: indiziertePraesidenten),
               ),
             ),
           ),
