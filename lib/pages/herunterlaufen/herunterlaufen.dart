@@ -21,13 +21,12 @@ class HerunterlaufenSeite extends StatefulWidget {
 }
 
 class _HerunterlaufenSeiteZustand extends State<HerunterlaufenSeite> {
-
   List<String> indiziertePraesidenten = [];
 
   @override
   void initState() {
     super.initState();
-    indiziertePraesidenten = indiziere(praesidenten);
+    indiziertePraesidenten = indiziere(praesidenten.map((praesident) => praesident['name']).toList());
   }
 
   @override
