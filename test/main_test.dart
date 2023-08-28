@@ -5,7 +5,7 @@ import 'package:sb_fl_app/main.dart';
 
 void main() {
   testWidgets(
-     'Seite existiert.',
+     'Hauptseite existiert.',
      (WidgetTester tester) async {
          const testWidget = PlatformApp(
              home: Hauptseite(schluessel: Key('HauptseiteSchluessel')),
