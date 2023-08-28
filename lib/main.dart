@@ -59,37 +59,35 @@ class HauptseiteSeite extends StatefulWidget {
 
 class _HauptseiteSeiteZustand extends State<HauptseiteSeite> {
   @override
-  Widget build(BuildContext context) {
-    return PlatformProvider(
-      builder: (context) => PlatformTheme(
-        builder: (context) => PlatformApp(
-          localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
-            DefaultMaterialLocalizations.delegate,
-            DefaultWidgetsLocalizations.delegate,
-            DefaultCupertinoLocalizations.delegate,
-          ],
-          home: PlatformScaffold(
-            appBar: PlatformAppBar(
-              title: const Text('Hauptseite'),
-              leading: PlatformIconButton(
-                onPressed: () => context.go('/runter_laufen'),
-                icon: Icon(context.platformIcons.share),
-              ),
-              trailingActions: [
-                PlatformIconButton(
-                  onPressed: () => context.go('/rauf_laufen'),
-                  icon: Icon(context.platformIcons.upArrow),
-                ),
-                PlatformIconButton(
-                  onPressed: () => context.go('/runter_laufen'),
-                  icon: Icon(context.platformIcons.downArrow),
-                ),
-              ],
+  Widget build(BuildContext context) => PlatformProvider(
+    builder: (context) => PlatformTheme(
+      builder: (context) => PlatformApp(
+        localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
+          DefaultMaterialLocalizations.delegate,
+          DefaultWidgetsLocalizations.delegate,
+          DefaultCupertinoLocalizations.delegate,
+        ],
+        home: PlatformScaffold(
+          appBar: PlatformAppBar(
+            title: const Text('Hauptseite'),
+            leading: PlatformIconButton(
+              onPressed: () => context.go('/runter_laufen'),
+              icon: Icon(context.platformIcons.share),
             ),
-            body: const Center(child: Text('Hello World!')),
+            trailingActions: [
+              PlatformIconButton(
+                onPressed: () => context.go('/rauf_laufen'),
+                icon: Icon(context.platformIcons.upArrow),
+              ),
+              PlatformIconButton(
+                onPressed: () => context.go('/runter_laufen'),
+                icon: Icon(context.platformIcons.downArrow),
+              ),
+            ],
           ),
+          body: const Center(child: Text('Hello World!')),
         ),
       ),
-    );
-  }
+    ),
+  );
 }
