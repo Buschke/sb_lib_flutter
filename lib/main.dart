@@ -68,28 +68,28 @@ class _HauptseiteSeiteZustand extends State<HauptseiteSeite> {
             DefaultWidgetsLocalizations.delegate,
             DefaultCupertinoLocalizations.delegate,
           ],
-         home: PlatformScaffold(
-          appBar: PlatformAppBar(
-            title: const Text('Hauptseite'),
-            leading: PlatformIconButton(
-              onPressed: () => context.go('/runter_laufen'),
-              icon: Icon(context.platformIcons.share),
-            ),
-            trailingActions: [
-              PlatformIconButton(
-                onPressed: () => context.go('/rauf_laufen'),
-                icon: Icon(context.platformIcons.upArrow),
-              ),
-              PlatformIconButton(
+          home: PlatformScaffold(
+            appBar: PlatformAppBar(
+              title: const Text('Hauptseite'),
+              leading: PlatformIconButton(
                 onPressed: () => context.go('/runter_laufen'),
-                icon: Icon(context.platformIcons.downArrow),
+                icon: Icon(context.platformIcons.share),
               ),
-            ],
+              trailingActions: [
+                PlatformIconButton(
+                  onPressed: () => context.go('/rauf_laufen'),
+                  icon: Icon(context.platformIcons.upArrow),
+                ),
+                PlatformIconButton(
+                  onPressed: () => context.go('/runter_laufen'),
+                  icon: Icon(context.platformIcons.downArrow),
+                ),
+              ],
+            ),
+            body: const Center(child: Text('Hello World!')),
           ),
-           body: const Text('Hello World!'),
-         ),
+        ),
       ),
-    ),
     );
   }
 }
