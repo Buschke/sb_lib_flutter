@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sb_fl_app/main.dart';
+import 'package:sb_fl_app/lib/widgets/platform_widgets/platform_slider.dart';
 
 void main() {
-  group('Hauptseite', () {
+  group('Slider', () {
     testWidgets(
-      'Hauptseite existiert.',
+      'Slider existiert.',
       (WidgetTester tester) async {
         const testWidget = PlatformApp(
-          home: Hauptseite(schluessel: Key('HauptseiteSchluessel')),
+          home: MeinSlider(schluessel: Key('SliderSchluessel')),
         );
 
         await tester.pumpWidget(testWidget);

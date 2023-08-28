@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sb_fl_app/main.dart';
+import 'package:sb_fl_app/pages/herunterlaufen/herunterlaufen.dart';
 
 void main() {
-  group('Hauptseite', () {
+  group('Herunterlaufen', () {
     testWidgets(
-      'Hauptseite existiert.',
+      'Seite Herunterlaufen existiert.',
       (WidgetTester tester) async {
         const testWidget = PlatformApp(
-          home: Hauptseite(schluessel: Key('HauptseiteSchluessel')),
+          home: Herunterlaufen(schluessel: Key('HerunterlaufenSchluessel')),
         );
 
         await tester.pumpWidget(testWidget);
