@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sb_fl_app/lib/meine_daten/praesidenten.dart';
+import 'package:sb_fl_app/lib/meine_tools/tools_listen.dart';
 import 'package:sb_fl_app/lib/widgets/platform_widgets/platform_list_tile.dart';
 
 class Herunterlaufen extends StatelessWidget {
@@ -19,63 +21,6 @@ class HerunterlaufenSeite extends StatefulWidget {
 }
 
 class _HerunterlaufenSeiteZustand extends State<HerunterlaufenSeite> {
-  List<String> praesidenten = [
-    'George Washington',
-    'John Adams',
-    'Thomas Jefferson',
-    'James Madison',
-    'James Monroe',
-    'John Quincy Adams',
-    'Andrew Jackson',
-    'Martin Van Buren',
-    'William Henry Harrison',
-    'John Tyler',
-    'James K. Polk',
-    'Zachary Taylor',
-    'Millard Fillmore',
-    'Franklin Pierce',
-    'James Buchanan',
-    'Abraham Lincoln',
-    'Andrew Johnson',
-    'Ulysses S. Grant',
-    'Rutherford B. Hayes',
-    'James A. Garfield',
-    'Chester A. Arthur',
-    'Grover Cleveland',
-    'Benjamin Harrison',
-    'Grover Cleveland',
-    'William McKinley',
-    'Theodore Roosevelt',
-    'William Howard Taft',
-    'Woodrow Wilson',
-    'Warren G. Harding',
-    'Calvin Coolidge',
-    'Herbert Hoover',
-    'Franklin D. Roosevelt',
-    'Harry S. Truman',
-    'Dwight D. Eisenhower',
-    'John F. Kennedy',
-    'Lyndon B. Johnson',
-    'Richard Nixon',
-    'Gerald Ford',
-    'Jimmy Carter',
-    'Ronald Reagan',
-    'George H. W. Bush',
-    'Bill Clinton',
-    'George W. Bush',
-    'Barack Obama',
-    'Donald Trump',
-    'Joe Biden',
-  ];
-
-  List<String> indiziere(List<String> liste) {
-    return liste.asMap().entries.map((entry) {
-      final index = entry.key + 1;
-      final name = entry.value;
-      final indexedName = '$index. $name';
-      return indexedName;
-    }).toList();
-  }
 
   List<String> indiziertePraesidenten = [];
 
