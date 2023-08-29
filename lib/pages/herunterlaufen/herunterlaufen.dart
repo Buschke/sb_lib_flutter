@@ -26,7 +26,7 @@ class _HerunterlaufenSeiteZustand extends State<HerunterlaufenSeite> {
   @override
   void initState() {
     super.initState();
-    indiziertePraesidenten = indiziere(praesidenten.map((praesident) => praesident['name']).toList());
+    // indiziertePraesidenten = indiziere(praesidenten.map((praesident) => praesident['name']).toList());
   }
 
   @override
