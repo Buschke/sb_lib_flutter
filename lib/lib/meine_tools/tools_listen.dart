@@ -2,10 +2,16 @@ import 'package:sb_fl_app/lib/meine_daten/bundeskanzler.dart';
 
 class BasicsListenTools {
   // Lade Daten
+  var a = ['eins', 'zwei', 'drei'];
+  var b = ['eins', 'zwei', 'drei'];
+  var c =[];
   List<String> x = Bundeskanzler().getBundeskanzler;
   // Verarbeite Daten
 
   // Gib Daten aus,
+  get getA => a;
+  get getB => b;
+  get getC => c;
 }
 
 class ListenTools extends BasicsListenTools {
