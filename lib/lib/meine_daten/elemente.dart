@@ -1,4 +1,5 @@
 List<String> elemente = [
     'Helium',
-    'Sauerstoff'
+    'Sauerstoff',
+    'Stickstoff'
 ]
