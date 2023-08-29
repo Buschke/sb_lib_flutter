@@ -1,6 +1,1 @@
-List<String> elemente = [
-    'Helium',
-    'Sauerstoff',
-    'Stickstoff',
-    'Eisen'
-]
+List<String> elemente = ['Helium', 'Sauerstoff', 'Stickstoff', 'Eisen'];
