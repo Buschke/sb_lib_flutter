@@ -3,6 +3,7 @@ import 'package:sb_fl_app/lib/meine_tools/tools_listen.dart';
 
 void main() {
   group('Tools von Listen', () {
+    ListenTools lt = ListenTools();
     test('Indiziere laueft.', () {
       List<String> testDaten = [
         'Wilhelm Conrad Röntgen',
@@ -16,7 +17,7 @@ void main() {
         '3. Pieter Zeeman',
       ];
 
-      expect(indiziere(testDaten), erwartetesErgebnis);
+      expect(lt.indiziere(testDaten), erwartetesErgebnis);
     });
     test('createPresidentEntries laueft.', () {
       List<Map<String, String>> testDaten = [
@@ -40,7 +41,12 @@ void main() {
         '3. Pieter Zeeman - 1902-1902',
       ];
 
-      expect(createPresidentEntries(testDaten), erwartetesErgebnis);
+      expect(lt.createPresidentEntries(testDaten), erwartetesErgebnis);
+    });
+  });
+  group('Basic-Check Listen-Methoden', () {
+    test('Erster Check', () {
+      expect(1, 1);
     });
   });
 }

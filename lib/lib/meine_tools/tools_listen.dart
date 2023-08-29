@@ -1,26 +1,38 @@
-List<String> indiziere(List<String> liste) {
-  return liste.asMap().entries.map((entry) {
-    final index = entry.key + 1;
-    final name = entry.value;
-    final indexedName = '$index. $name';
-    return indexedName;
-  }).toList();
+import 'package:sb_fl_app/lib/meine_daten/bundeskanzler.dart';
+
+class BasicsListenTools {
+  // Lade Daten
+  List<String> x = Bundeskanzler().getBundeskanzler;
+  // Verarbeite Daten
+
+  // Gib Daten aus,
 }
 
-List<String> createPresidentEntries(List<Map<String, String>> presidents) {
-  List<String> presidentEntries = [];
+class ListenTools extends BasicsListenTools {
+  List<String> indiziere(List<String> liste) {
+    return liste.asMap().entries.map((entry) {
+      final index = entry.key + 1;
+      final name = entry.value;
+      final indexedName = '$index. $name';
+      return indexedName;
+    }).toList();
+  }
 
-  presidentEntries = ['Sven', 'Buschke'];
-  // for (int i = 0; i < presidents.length; i++) {
-  //   Map<String, String> president = presidents[i];
-  //   String index = (i + 1).toString();
-  //   String name = president['name'];
-  //   String amtsdauer = president['amtsdauer'];
+  List<String> createPresidentEntries(List<Map<String, String>> presidents) {
+    List<String> presidentEntries = [];
 
-  //   String entry = '$index. $name - $amtsdauer';
-  //   presidentEntries.add(entry);
-  // }
+    presidentEntries = ['Sven', 'Buschke'];
+    // for (int i = 0; i < presidents.length; i++) {
+    //   Map<String, String> president = presidents[i];
+    //   String index = (i + 1).toString();
+    //   String name = president['name'];
+    //   String amtsdauer = president['amtsdauer'];
 
-  return presidentEntries;
-  // return presidents;
+    //   String entry = '$index. $name - $amtsdauer';
+    //   presidentEntries.add(entry);
+    // }
+
+    return presidentEntries;
+    // return presidents;
+  }
 }
