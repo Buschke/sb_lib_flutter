@@ -6,7 +6,8 @@ class Elektromagnetismus extends Elektrodynamik {
 
 }
 
-class ElektromagnetischeWellen extends Elektromagnetismus with Wellen {
+// class ElektromagnetischeWellen extends Elektromagnetismus with Wellen {
+class ElektromagnetischeWellen extends Elektromagnetismus {
 
 }
 

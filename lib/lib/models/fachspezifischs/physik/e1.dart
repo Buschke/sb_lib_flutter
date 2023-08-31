@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 class Mechanik {
 
@@ -112,35 +111,35 @@ class Astronomie {
 
 }
 
-class AstronomieAstrophysik extends Astronomie with Astrophysik {
+// class AstronomieAstrophysik extends Astronomie with Astrophysik {
 
-}
+// }
 
-class AstronomieKosmologie extends Astronomie with Kosmologie {
+// class AstronomieKosmologie extends Astronomie with Kosmologie {
 
-}
+// }
 
-class AstronomieAstrophysikKosmologie extends Astronomie with Astrophysik, Kosmologie {
+// class AstronomieAstrophysikKosmologie extends Astronomie with Astrophysik, Kosmologie {
 
-}
+// }
 
-class AstronomieAstrophysikKosmologieQuantenphysik extends Astronomie with Astrophysik, Kosmologie, Quantenphysik {
+// class AstronomieAstrophysikKosmologieQuantenphysik extends Astronomie with Astrophysik, Kosmologie, Quantenphysik {
 
-}
+// }
 
-class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorie extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie {
+// class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorie extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie {
 
-}
+// }
 
-class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorieQuantenfeldtheorie extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie, Quantenfeldtheorie {
+// class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorieQuantenfeldtheorie extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie, Quantenfeldtheorie {
 
-}
+// }
 
-class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorieQuantenfeldtheorieStringtheorie extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie, Quantenfeldtheorie, Stringtheorie {
+// class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorieQuantenfeldtheorieStringtheorie extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie, Quantenfeldtheorie, Stringtheorie {
 
-}
+// }
 
-class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorieQuantenfeldtheorieStringtheorieTeilchenphysik extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie, Quantenfeldtheorie, Stringtheorie, Teilchenphysik {
+// class AstronomieAstrophysikKosmologieQuantenphysikRelativitaetstheorieQuantenfeldtheorieStringtheorieTeilchenphysik extends Astronomie with Astrophysik, Kosmologie, Quantenphysik, Relativitaetstheorie, Quantenfeldtheorie, Stringtheorie, Teilchenphysik {
 
-}
+// }
 
