@@ -4,7 +4,7 @@ class BasicsListenTools {
   // Lade Daten
   var a = ['eins', 'zwei', 'drei'];
   var b = ['eins', 'zwei', 'drei'];
-  var c =[];
+  var c = [];
   List<String> x = Bundeskanzler().getBundeskanzler;
   // Verarbeite Daten
 
@@ -16,6 +16,8 @@ class BasicsListenTools {
 
 class ListenTools extends BasicsListenTools {
   List<String> indiziere(List<String> liste) {
+    Map<int, String> a = liste.asMap();
+    Iterable<MapEntry<int, String>> b = liste.asMap().entries;
     return liste.asMap().entries.map((entry) {
       final index = entry.key + 1;
       final name = entry.value;
