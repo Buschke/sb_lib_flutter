@@ -1,3 +1,11 @@
+void main() {
+  group('HOF-Test', () {
+    test('erster Test', () {
+      expect(true, true);
+    });
+  });
+}
+
 // import 'package:flutter_test/flutter_test.dart';
 // import 'package:sb_fl_app/lib/models/fp/higher_order_function.dart';
 
