@@ -11,11 +11,11 @@ class PeriodenElement {
     final double dichte;
     final String hauptquantenzahl;
     final String kristallstruktur;
-    final String elektronegativitaet;
-    final String ionisierungsenergie;
-    final String atomradius;
-    final String kovalenzradius;
-    final String vanDerWaalsRadius;
+    final double elektronegativitaet;
+    final double ionisierungsenergie;
+    final double atomradius;
+    final double kovalenzradius;
+    final double vanDerWaalsRadius;
     final String beschreibung;
     final int entdeckungsjahr;
     final List<int> oxidationszustaende;
@@ -27,7 +27,7 @@ class PeriodenElement {
     final int ionenradius;
     final double schmelzwaerme;
     final int spezifischeWaerme;
-    final int elektrischeLeitfaehigkeit;
+    final double elektrischeLeitfaehigkeit;
     final double waermeleitfaehigkeit;
     final double molaresVolumen;
     final double atomvolumen;
