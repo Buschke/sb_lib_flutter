@@ -1,0 +1,61 @@
+
+import 'dart:math';
+
+class QuantitativeMethodsCFALevel1 {
+  double simpleInterest(double principal, double rate, double time) => principal * rate * time;
+  double compoundInterest(double principal, double rate, double time) => principal * pow((1 + rate), time);
+  double discount(double listPrice, double discountRate) => listPrice * discountRate;
+  double markup(double cost, double markupRate) => cost * markupRate;
+  double profit(double revenue, double cost) => revenue - cost;
+  double revenue(double price, double quantity) => price * quantity;
+  double cost(double fixedCost, double variableCost) => fixedCost + variableCost;
+  double breakEvenPoint(double fixedCost, double price, double variableCost) => fixedCost / (price - variableCost);
+  double margin(double profit, double revenue) => profit / revenue;
+  double marginOfSafety(double actualSales, double breakEvenSales) => actualSales - breakEvenSales;
+  double marginOfSafetyPercentage(double marginOfSafety, double actualSales) => marginOfSafety / actualSales;
+  double operatingLevarage(double contributionMargin, double operatingIncome) => contributionMargin / operatingIncome;
+  double operatingLevaragePercentage(double operatingLevarage) => operatingLevarage * 100;
+  double degreeOfOperatingLevarage(double contributionMargin, double operatingIncome) => contributionMargin / operatingIncome;
+  double degreeOfOperatingLevaragePercentage(double degreeOfOperatingLevarage) => degreeOfOperatingLevarage * 100;
+  double degreeOfFinancialLevarage(double operatingIncome, double netIncome) => operatingIncome / netIncome;
+  double degreeOfFinancialLevaragePercentage(double degreeOfFinancialLevarage) => degreeOfFinancialLevarage * 100;
+  double degreeOfTotalLevarage(double degreeOfOperatingLevarage, double degreeOfFinancialLevarage) => degreeOfOperatingLevarage * degreeOfFinancialLevarage;
+  double degreeOfTotalLevaragePercentage(double degreeOfTotalLevarage) => degreeOfTotalLevarage * 100;
+  double presentValue(double futureValue, double discountRate, double time) => futureValue / pow((1 + discountRate), time);
+  double futureValue(double presentValue, double discountRate, double time) => presentValue * pow((1 + discountRate), time);
+  double netPresentValue(double initialInvestment, double cashFlow, double discountRate, double time) => initialInvestment + (cashFlow / pow((1 + discountRate), time));
+  double internalRateOfReturn(double initialInvestment, double cashFlow, double time) => pow((cashFlow / initialInvestment), (1 / time)) - 1;
+  double paybackPeriod(double initialInvestment, double cashFlow) => initialInvestment / cashFlow;
+  double paybackPeriodDiscounted(double initialInvestment, double cashFlow, double discountRate) => initialInvestment / (cashFlow * discountRate);
+  double averageAccountingReturn(double averageProfit, double initialInvestment) => averageProfit / initialInvestment;
+  double averageAccountingReturnPercentage(double averageAccountingReturn) => averageAccountingReturn * 100;
+  double averageRateOfReturn(double initialInvestment, double cashFlow, double time) => pow((cashFlow / initialInvestment), (1 / time)) - 1;
+  double averageRateOfReturnPercentage(double averageRateOfReturn) => averageRateOfReturn * 100;
+  double profitabilityIndex(double initialInvestment, double cashFlow, double discountRate, double time) => (initialInvestment + (cashFlow / pow((1 + discountRate), time))) / initialInvestment;
+  double paybackIndex(double initialInvestment, double cashFlow, double discountRate, double time) => (initialInvestment / cashFlow) + (1 / pow((1 + discountRate), time));
+  double modifiedInternalRateOfReturn(double initialInvestment, double cashFlow, double discountRate, double time) => pow((cashFlow / initialInvestment), (1 / time)) - 1;
+  double modifiedInternalRateOfReturnPercentage(double modifiedInternalRateOfReturn) => modifiedInternalRateOfReturn * 100;
+  double netPresentValueProfile(double initialInvestment, double cashFlow, double discountRate, double time) => initialInvestment + (cashFlow / pow((1 + discountRate), time));
+  double netPresentValueProfilePercentage(double netPresentValueProfile) => netPresentValueProfile * 100;
+  double netPresentValueProfileDiscounted(double initialInvestment, double cashFlow, double discountRate, double time) => initialInvestment + (cashFlow / pow((1 + discountRate), time));
+  double netPresentValueProfileDiscountedPercentage(double netPresentValueProfileDiscounted) => netPresentValueProfileDiscounted * 100;
+  double profitabilityIndexProfile(double initialInvestment, double cashFlow, double discountRate, double time) => (initialInvestment + (cashFlow / pow((1 + discountRate), time))) / initialInvestment;
+  double profitabilityIndexProfilePercentage(double profitabilityIndexProfile) => profitabilityIndexProfile * 100;
+  double paybackIndexProfile(double initialInvestment, double cashFlow, double discountRate, double time) => (initialInvestment / cashFlow) + (1 / pow((1 + discountRate), time));
+  double paybackIndexProfilePercentage(double paybackIndexProfile) => paybackIndexProfile * 100;
+  double modifiedInternalRateOfReturnProfile(double initialInvestment, double cashFlow, double discountRate, double time) => pow((cashFlow / initialInvestment), (1 / time)) - 1;
+  double modifiedInternalRateOfReturnProfilePercentage(double modifiedInternalRateOfReturnProfile) => modifiedInternalRateOfReturnProfile * 100;
+  double profitabilityIndexProfileDiscounted(double initialInvestment, double cashFlow, double discountRate, double time) => (initialInvestment + (cashFlow / pow((1 + discountRate), time))) / initialInvestment;
+  double profitabilityIndexProfileDiscountedPercentage(double profitabilityIndexProfileDiscounted) => profitabilityIndexProfileDiscounted * 100;
+  double paybackIndexProfileDiscounted(double initialInvestment, double cashFlow, double discountRate, double time) => (initialInvestment / cashFlow) + (1 / pow((1 + discountRate), time));
+  double paybackIndexProfileDiscountedPercentage(double paybackIndexProfileDiscounted) => paybackIndexProfileDiscounted * 100;
+  double modifiedInternalRateOfReturnProfileDiscounted(double initialInvestment, double cashFlow, double discountRate, double time) => pow((cashFlow / initialInvestment), (1 / time)) - 1;
+  double modifiedInternalRateOfReturnProfileDiscountedPercentage(double modifiedInternalRateOfReturnProfileDiscounted) => modifiedInternalRateOfReturnProfileDiscounted * 100;
+  double normalDistributionDensity(double x, double mean, double standardDeviation) => (1 / (standardDeviation * sqrt(2 * pi))) * exp(-0.5 * pow(((x - mean) / standardDeviation), 2));
+  double normalDistributionCumulative(double x, double mean, double standardDeviation) => 0.5 * (1 + erf((x - mean) / (standardDeviation * sqrt(2))));
+  double normalDistributionInverse(double probability, double mean, double standardDeviation) => mean + (standardDeviation * sqrt(2) * erfinv((2 * probability) - 1));
+  double standardNormalDistributionDensity(double x) => (1 / sqrt(2 * pi)) * exp(-0.5 * pow(x, 2));
+  double standardNormalDistributionCumulative(double x) => 0.5 * (1 + erf(x / sqrt(2)));
+  double standardNormalDistributionInverse(double probability) => sqrt(2) * erfinv((2 * probability) - 1);
+  
+}
