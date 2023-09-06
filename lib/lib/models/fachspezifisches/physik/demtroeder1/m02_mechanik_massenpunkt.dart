@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:sb_fl_app/lib/models/fachspezifisches/physik/demtroeder1/00_demtroeder1.dart';
+import 'package:sb_fl_app/lib/models/fachspezifisches/physik/demtroeder1/m00_demtroeder1.dart';
 
 class MechanikMassenpunkt extends Demtroeder1 {
 
